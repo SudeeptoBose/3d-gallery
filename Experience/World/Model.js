@@ -8,7 +8,8 @@ export default class Model{
         this.resources = this.experience.resources
         this.assets = this.resources.items
         this.duck = this.assets.model.scene
-        this.gallery = this.assets.gallery.scene
+        this.artGallery = this.assets.gallery
+        this.gallery = this.artGallery.scene
         this.time = this.experience.time
         console.log(this.assets)
         this.setModel()
@@ -20,6 +21,7 @@ export default class Model{
     setModel()
     {
         this.scene.add(this.gallery)
+        this.gallery.scale.set(10,10,10)
         // this.duck.position.x = 1
         this.gallery.position.y = -0.5
     }

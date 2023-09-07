@@ -19,7 +19,7 @@ export default class Camera{
         this.perspectiveCamera = new THREE.PerspectiveCamera(35, this.sizes.aspectRatio, 0.1, 1000)
         this.scene.add(this.perspectiveCamera)
         this.perspectiveCamera.position.z = 5
-        this.perspectiveCamera.position.y = 2.5
+        this.perspectiveCamera.position.y = 35
     }
     
     setOrbitControls()
@@ -29,8 +29,10 @@ export default class Camera{
         // this.controls.enableDamping = true
         // this.controls.lookAt(0,0,0)
         this.controls.movementSpeed = 5
-        this.controls.lookSpeed = 0.01
+        this.controls.lookSpeed = 0.005
         this.controls.lookVertical = false
+        // this.controls.activeLook =false
+        this.controls.mouseDragOn = true
     }
     
     resize()
